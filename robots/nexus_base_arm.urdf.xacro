@@ -11,21 +11,21 @@
        name="nexus_base_arm" >
 
   <!-- misc common stuff? -->
-  <xacro:include filename="$(find nexus_robot)/urdf/common.xacro" />
+  <xacro:include filename="$(find nexus_widowx_gazebo)/urdf/common.xacro" />
   
   <!-- nexus base -->
-  <xacro:include filename="$(find nexus_robot)/urdf/nexus_base/base.urdf.xacro" />
+  <xacro:include filename="$(find nexus_widowx_gazebo)/urdf/nexus_base/base.urdf.xacro" />
 
   <!-- widowx arm -->
-  <xacro:include filename="$(find nexus_robot)/urdf/widowx_arm/common_colours.xacro" />
-  <xacro:include filename="$(find nexus_robot)/urdf/widowx_arm/common_materials.xacro" />
-  <xacro:include filename="$(find nexus_robot)/urdf/widowx_arm/widowx.urdf.xacro" />
+  <xacro:include filename="$(find nexus_widowx_gazebo)/urdf/widowx_arm/common_colours.xacro" />
+  <xacro:include filename="$(find nexus_widowx_gazebo)/urdf/widowx_arm/common_materials.xacro" />
+  <xacro:include filename="$(find nexus_widowx_gazebo)/urdf/widowx_arm/widowx.urdf.xacro" />
  
   <!-- controller manager -->
-  <xacro:include filename="$(find nexus_robot)/controller/ros_controller.urdf.xacro" />
+  <xacro:include filename="$(find nexus_widowx_gazebo)/controller/ros_controller.urdf.xacro" />
   
   <!-- materials for visualization -->
-  <xacro:include filename="$(find nexus_robot)/urdf/materials.urdf.xacro" />
+  <xacro:include filename="$(find nexus_widowx_gazebo)/urdf/materials.urdf.xacro" />
 
   <!-- The first use of a macro.  This one was defined in base.urdf.xacro above.
        A macro like this will expand to a set of link and joint definitions, and to additional

@@ -3,8 +3,8 @@
    <property name="M_SCALE" value="0.001"/>
    <property name="M_PI" value="3.14159"/>
    
-   <xacro:include filename="$(find nexus_robot)/urdf/widowx_arm/common_materials.xacro" />
-   <xacro:include filename="$(find nexus_robot)/urdf/widowx_arm/widowx.transmission.xacro" />
+   <xacro:include filename="$(find nexus_widowx_gazebo)/urdf/widowx_arm/common_materials.xacro" />
+   <xacro:include filename="$(find nexus_widowx_gazebo)/urdf/widowx_arm/widowx.transmission.xacro" />
    <xacro:macro name="default_inertia">
       <inertia ixx="0.002" ixy="0.0" ixz="0.0" iyy="0.002" iyz="0.0" izz="0.002" />
    </xacro:macro>
@@ -24,14 +24,14 @@
          <visual>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-               <mesh filename="package://nexus_robot/meshes/base_link.stl"/>
+               <mesh filename="package://nexus_widowx_gazebo/meshes/base_link.stl"/>
             </geometry>
             <xacro:material_black />
 	     </visual>
          <collision>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-               <mesh filename="package://nexus_robot/meshes/base_link.stl"/>
+               <mesh filename="package://nexus_widowx_gazebo/meshes/base_link.stl"/>
             </geometry>
          </collision>
          <inertial>
@@ -44,14 +44,14 @@
          <visual>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-               <mesh filename="package://nexus_robot/meshes/shoulder_link.stl" />
+               <mesh filename="package://nexus_widowx_gazebo/meshes/shoulder_link.stl" />
             </geometry>
             <xacro:material_black />
          </visual>
          <collision>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-               <mesh filename="package://nexus_robot/meshes/shoulder_link.stl"/>
+               <mesh filename="package://nexus_widowx_gazebo/meshes/shoulder_link.stl"/>
             </geometry>
          </collision>
          <inertial>
@@ -65,14 +65,14 @@
 			      <origin xyz="${M_SCALE*48.25} 0 ${M_SCALE*140}" rpy="0 0 0" />
             <!--origin xyz="0 0 0" rpy="0 0 0" /-->
             <geometry>
-               <mesh filename="package://nexus_robot/meshes/biceps_link.stl" />
+               <mesh filename="package://nexus_widowx_gazebo/meshes/biceps_link.stl" />
             </geometry>
             <xacro:material_black />
          </visual>
          <collision>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-               <mesh filename="package://nexus_robot/meshes/biceps_link.stl" />
+               <mesh filename="package://nexus_widowx_gazebo/meshes/biceps_link.stl" />
             </geometry>
          </collision>
          <inertial>
@@ -86,14 +86,14 @@
 			      <origin xyz="0 0 ${M_SCALE*142.03}" rpy="0 0 0" />
 			<!--origin xyz="0 0 0" rpy="0 0 0" /-->
             <geometry>
-               <mesh filename="package://nexus_robot/meshes/forearm_link.stl"/>
+               <mesh filename="package://nexus_widowx_gazebo/meshes/forearm_link.stl"/>
             </geometry>
            <xacro:material_black />
          </visual>
          <collision>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-               <mesh filename="package://nexus_robot/meshes/forearm_link.stl"/>
+               <mesh filename="package://nexus_widowx_gazebo/meshes/forearm_link.stl"/>
             </geometry>
          </collision>
          <inertial>
@@ -106,14 +106,14 @@
          <visual>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-               <mesh filename="package://nexus_robot/meshes/wrist_1_link.stl"/>
+               <mesh filename="package://nexus_widowx_gazebo/meshes/wrist_1_link.stl"/>
             </geometry>
             <xacro:material_black />
          </visual>
          <collision>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-               <mesh filename="package://nexus_robot/meshes/wrist_1_link.stl"/>
+               <mesh filename="package://nexus_widowx_gazebo/meshes/wrist_1_link.stl"/>
             </geometry>
          </collision>
          <inertial>
@@ -126,14 +126,14 @@
          <visual>
             <origin xyz="0 0 ${M_SCALE*43}" rpy="0 0 0" />
             <geometry>
-               <mesh filename="package://nexus_robot/meshes/wrist_2_link.stl"/>
+               <mesh filename="package://nexus_widowx_gazebo/meshes/wrist_2_link.stl"/>
             </geometry>
             <xacro:material_black />
          </visual>
          <collision>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-               <mesh filename="package://nexus_robot/meshes/wrist_2_link.stl"/>
+               <mesh filename="package://nexus_widowx_gazebo/meshes/wrist_2_link.stl"/>
             </geometry>
          </collision>
          <inertial>
@@ -146,14 +146,14 @@
          <visual>
             <origin xyz="0 0 0" rpy="0 0 1.57" />
             <geometry>
-               <mesh filename="package://nexus_robot/meshes/gripper_rail_link.stl"/>
+               <mesh filename="package://nexus_widowx_gazebo/meshes/gripper_rail_link.stl"/>
             </geometry>
             <xacro:material_black />
          </visual>
          <collision>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-               <mesh filename="package://nexus_robot/meshes/gripper_rail_link.stl"/>
+               <mesh filename="package://nexus_widowx_gazebo/meshes/gripper_rail_link.stl"/>
             </geometry>
          </collision>
          <inertial>
@@ -168,14 +168,14 @@
          <visual>
             <origin xyz="0 -0.0007 0" rpy="0 0 1.57" />
             <geometry>
-               <mesh filename="package://nexus_robot/meshes/gripper_hand_fixed_link.stl"/>
+               <mesh filename="package://nexus_widowx_gazebo/meshes/gripper_hand_fixed_link.stl"/>
             </geometry>
             <xacro:material_black />
          </visual>
          <collision>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-               <mesh filename="package://nexus_robot/meshes/gripper_hand_fixed_link.stl"/>
+               <mesh filename="package://nexus_widowx_gazebo/meshes/gripper_hand_fixed_link.stl"/>
             </geometry>
          </collision>
          <inertial>
@@ -188,14 +188,14 @@
          <visual>
             <origin xyz="0 0.0007 0" rpy="0 0 -1.57" />
             <geometry>
-               <mesh filename="package://nexus_robot/meshes/gripper_hand_fixed_link.stl"/>
+               <mesh filename="package://nexus_widowx_gazebo/meshes/gripper_hand_fixed_link.stl"/>
             </geometry>
             <xacro:material_black />
          </visual>
          <collision>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-               <mesh filename="package://nexus_robot/meshes/gripper_hand_fixed_link.stl"/>
+               <mesh filename="package://nexus_widowx_gazebo/meshes/gripper_hand_fixed_link.stl"/>
             </geometry>
          </collision>
          <inertial>

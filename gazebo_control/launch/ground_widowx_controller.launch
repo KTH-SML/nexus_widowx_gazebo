@@ -5,7 +5,7 @@
   <arg name="name" />
 
   <!-- upload arm and gripper controller parameters -->
-  <rosparam file="$(find nexus_robot)/gazebo_control/config/ground_widowx_controller.yaml" command="load" /> 
+  <rosparam file="$(find nexus_widowx_gazebo)/gazebo_control/config/ground_widowx_controller.yaml" command="load" /> 
  
   <!-- spawn arm controller -->
   <node pkg="controller_manager" type="spawner" name="$(arg arm_name)_arm_controller_spawner"

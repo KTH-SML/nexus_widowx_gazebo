@@ -10,8 +10,8 @@
        xmlns:xacro="http://ros.org/wiki/xacro">
  
   <!-- sensors -->
-  <xacro:include filename="$(find nexus_robot)/urdf/nexus_base/base.gazebo.xacro"/>
-  <xacro:include filename="$(find nexus_robot)/urdf/nexus_base/base.transmission.xacro"/>
+  <xacro:include filename="$(find nexus_widowx_gazebo)/urdf/nexus_base/base.gazebo.xacro"/>
+  <xacro:include filename="$(find nexus_widowx_gazebo)/urdf/nexus_base/base.transmission.xacro"/>
   
   <!-- simplified box collision geometry for base -->
   <xacro:property name="base_size_x" value="0.380"/>
@@ -118,7 +118,7 @@
       <visual>
         <origin xyz="0 0 0.02" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://nexus_robot/meshes/mecanum_wheel.dae">
+          <mesh filename="package://nexus_widowx_gazebo/meshes/mecanum_wheel.dae">
             <scale>${caster_scale} ${caster_scale} ${caster_scale}</scale>
           </mesh>
         </geometry>
@@ -167,7 +167,7 @@
       <visual>
         <origin xyz="0 0 0.02" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://nexus_robot/meshes/mecanum_wheel.dae" />
+          <mesh filename="package://nexus_widowx_gazebo/meshes/mecanum_wheel.dae" />
           <scale>${caster_scale} ${caster_scale} ${caster_scale}</scale>
         </geometry>
       </visual>
@@ -216,7 +216,7 @@
       <visual>
         <origin xyz="0 0 0.02" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://nexus_robot/meshes/mecanum_wheel.dae" />
+          <mesh filename="package://nexus_widowx_gazebo/meshes/mecanum_wheel.dae" />
           <scale>${caster_scale} ${caster_scale} ${caster_scale}</scale>
         </geometry>
       </visual>
@@ -264,7 +264,7 @@
       <visual>
         <origin xyz="0 0 0.02" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://nexus_robot/meshes/mecanum_wheel.dae" />
+          <mesh filename="package://nexus_widowx_gazebo/meshes/mecanum_wheel.dae" />
           <scale>${caster_scale} ${caster_scale} ${caster_scale}</scale>
         </geometry>
       </visual>
